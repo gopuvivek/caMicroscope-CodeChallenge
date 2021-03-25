@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>GSOC 2021 Code Challenge</title>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    
+    <body>
+        <center>
+            <h1>
+                <a href="/">GSOC 2021 Code Challenge - caMicroscope<br><i>Pathology Smartpens</i></a> 
+            </h1>
+            <img src="{{ url_for('static', filename='outputs/input_edges.jpg') }}" alt="given input" class="img-fluid">
+            <div>
+                <a href="{{ url_for('static', filename='outputs/detail_o.jpg') }}" class="btn btn-info">Click here for more details</a>
+                <br>
+                <br>
+                <form action="/getInputPoint" class="form" method="post" enctype="multipart/form-data">
+                    <button class="btn btn-success" type="submit">Next Action</button>
+                </form>
+            </div>
+        </center>
+       
+    </body> 
+</html>

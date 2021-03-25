@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>GSOC 2021 Code Challenge</title>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    
+    <body>
+        <center>
+            <h1>
+                <a href="/">GSOC 2021 Code Challenge - caMicroscope<br><i>Pathology Smartpens</i></a> 
+            </h1>
+            <canvas id="canvasimg"></canvas>
+            <div>
+                <form action="/getNearestEdge" class="form" method="post" enctype="multipart/form-data">
+                    <p id="det" name="det" class="lead">Click anywhere on the image</p>
+                    <input type="number" class="form-control" hidden name="x" id="x">
+                    <input type="number" class="form-control" hidden name="y" id="y">
+                    <button type="submit" class="btn btn-success">Get Nearest Edge</button>
+                    <a type="reset" href="/getInputPoint" class="btn btn-danger">Reset</a>
+                </form>
+            </div>
+            
+        </center>
+       
+    </body> 
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection.v1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/draw.js') }}"></script>
+</html>

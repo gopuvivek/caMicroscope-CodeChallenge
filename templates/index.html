@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>GSOC 2021 Code Challenge</title>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    
+    <body>
+        <center>
+            <h1>
+                <a href="/">GSOC 2021 Code Challenge - caMicroscope<br><i>Pathology Smartpens</i></a> 
+            </h1>
+            <form class="form mt-5" method="post" action="/getImage" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input name="file" type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <br>
+                <span>Local Files</span>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-2">
+                        <select class="form-select" name="local">
+                            <option value="1">Image 1</option>
+                            <option value="2">Image 2</option>
+                            <option value="3">Image 3</option>
+                            <option value="4">Image 4</option>
+                            <option value="5">Image 5</option>
+                            <option value="6">Image 6</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label><br><input name="check" type="checkbox"> Use Local File</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </div>
+                <div class="col-6">
+                    <p style="font-family: 'Courier New', Courier, monospace;"><br>* You may upload any pathological image or choose one from local files</p>
+                    <p style="font-family: 'Courier New', Courier, monospace;">* Please ensure to check 'Use Local File' while using a local image</p>
+                </div>
+                
+            </form>
+            
+        </center>
+       
+    </body> 
+    <footer style="text-align: center; margin-top: 150px;">
+        <p>&copy; Designed and Developed by Vivek, KMIT</p>
+    </footer>
+    
+</html>
