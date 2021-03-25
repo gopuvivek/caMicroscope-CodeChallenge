@@ -17,6 +17,10 @@ body{
 a{
     text-decoration: none;
 }
+.note
+{
+    color:cornflowerblue;
+}
 option{
     font-family: 'Courier New', Courier, monospace;
 }

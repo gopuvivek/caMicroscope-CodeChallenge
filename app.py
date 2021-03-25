@@ -1,10 +1,6 @@
 from flask import Flask, Response, request, render_template, redirect
-import io
 import os
 from werkzeug.utils import secure_filename
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.backends.backend_agg import FigureCanvasAgg
-from matplotlib.backends.backend_svg import FigureCanvasSVG
 import cv2
 import random as rd
 import matplotlib.pyplot as plt
